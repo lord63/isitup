@@ -1,0 +1,4 @@
+2015.05.30 v0.1.0
+- first public release
+- CLI: `$ isitup URL`
+- API: `from isitup import check; check(url)`
