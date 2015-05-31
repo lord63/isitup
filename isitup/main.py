@@ -7,7 +7,10 @@ import requests
 
 
 def check(url):
-    response = requests.get("http://isitup.org/{0}.json".format(url)).json()
+    response = requests.get(
+        "http://isitup.org/{0}.json".format(url),
+        headers={'User-Agent': 'https://github.com/lord63/isitup'}
+    ).json()
     status_code = response["status_code"]
     if status_code == 1:
         time, code, ip = (response['response_time'], response['response_code'],
