@@ -8,7 +8,7 @@ import requests
 
 def check(url):
     response = requests.get(
-        "http://isitup.org/{0}.json".format(url),
+        "https://isitup.org/{0}.json".format(url),
         headers={'User-Agent': 'https://github.com/lord63/isitup'}
     ).json()
     status_code = response["status_code"]
