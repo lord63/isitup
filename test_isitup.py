@@ -3,7 +3,7 @@
 
 from __future__ import absolute_import, unicode_literals
 
-from isitup import check
+from isitup.main import check
 
 import pytest
 

@@ -10,7 +10,7 @@ Check whether a website is up or down. Using [isitup][]'s API. Inspired by [is-u
 ## Install
 
     $ pip install isitup
-    
+
 ## Usage
 
 * CLI
@@ -18,13 +18,13 @@ Check whether a website is up or down. Using [isitup][]'s API. Inspired by [is-u
         $ isitup github.com
         Yay, github.com is up.
         It took 0.022 ms for a 301 response code with an ip of 192.30.252.130
-    
+
 * API
 
-        >>> from isitup import check
+        >>> from isitup.main import check
         >>> check('github.com')
         u'Yay, github.com is up.\nIt took 0.022 ms for a 301 response code with an ip of 192.30.252.130'
-    
+
 ## License
 
 MIT.

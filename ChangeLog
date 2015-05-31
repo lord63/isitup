@@ -1,3 +1,8 @@
+2015.05.31 v0.2.0
+- add user agent, fix #1
+- use https instead of http for the api
+- fix the install error
+
 2015.05.30 v0.1.0
 - first public release
 - CLI: `$ isitup URL`
