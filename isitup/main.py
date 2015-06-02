@@ -18,6 +18,6 @@ def check(url):
         return ("Yay, {0} is up.\nIt took {1} ms for a {2} response code "
                 "with an ip of {3}".format(url, time, code, ip))
     if status_code == 2:
-        return "{0} seems to be down!"
+        return "{0} seems to be down!".format(url)
     if status_code == 3:
         return "We need a valid domain to check! Try again."
