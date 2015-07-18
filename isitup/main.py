@@ -16,6 +16,8 @@ def check(url):
                 "can't check the site right now.")
     except requests.exceptions.Timeout:
         return "The request timed out."
+    except requests.exceptions.RequestException as error:
+        return "Something bad happened:\n{0}".format(error)
     status_code = response.json()["status_code"]
     if status_code == 1:
         return ("Yay, {0} is up.\nIt took {1[response_time]} ms "
