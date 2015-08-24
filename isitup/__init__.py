@@ -11,7 +11,7 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from __future__ import absolute_import, unicode_literals
+from __future__ import absolute_import
 
 
 __title__ = "isitup"
