@@ -6,6 +6,8 @@ from __future__ import absolute_import
 from isitup.main import check
 
 import pytest
+from click import UsageError
+from click import ClickException
 
 
 def test_website_is_up():
@@ -13,8 +15,12 @@ def test_website_is_up():
 
 
 def test_website_is_down():
-    assert "seems to be down!" in check('justfortestisitup.com')
+    with pytest.raises(ClickException) as exception:
+        check('justfortestisitup.com')
+    assert "seems to be down!" in str(exception.value)
 
 
 def test_invalid_domain():
-    assert check('invalid_domain')[-10:] == "Try again."
+    with pytest.raises(UsageError) as exception:
+        check('invalid_domain')
+    assert "Try again." == str(exception.value)[-10:]
